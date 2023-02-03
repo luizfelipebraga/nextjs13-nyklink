@@ -1,18 +1,27 @@
 import './globals.css';
 
+import { Poppins } from '@next/font/google';
+
+import StyledComponentsRegistry from '../lib/registry';
+import GlobalStyles from './globalStyles';
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  display: 'optional',
+  weight: ['300', '400', '500', '600', '700', '700'], // I want this font-weight has 400,500,600,700,800,900
+});
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
-      <body>{children}</body>
+    <html lang="en" className={poppins.className}>
+      <body>
+        <GlobalStyles />
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      </body>
     </html>
   );
 }
