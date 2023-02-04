@@ -1,3 +1,4 @@
+'use client';
 
 import Logo from '@app/assets/logo1.png';
 import ContatoButton from '@app/components/Contato/page';

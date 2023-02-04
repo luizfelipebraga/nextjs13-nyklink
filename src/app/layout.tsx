@@ -8,7 +8,7 @@ import GlobalStyles from './globalStyles';
 const poppins = Poppins({
   subsets: ['latin'],
   display: 'optional',
-  weight: ['300', '400', '500', '600', '700', '700'], // I want this font-weight has 400,500,600,700,800,900
+  weight: ['300', '400', '500', '600', '700', '800'], // I want this font-weight has 400,500,600,700,800,900
 });
 
 export default function RootLayout({

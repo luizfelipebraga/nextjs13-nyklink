@@ -1,3 +1,5 @@
+'use client';
+
 import { Loader } from './styles';
 
 export default function LoadingComponent() {
